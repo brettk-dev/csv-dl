@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download CSV</title>
+  </head>
+  <body>
+    <button id="csvButton">Download CSV</button>
+    <script type="module">
+      import downloadCsv from "./src/index.ts";
+
+      document.getElementById("csvButton").addEventListener("click", () => {
+        downloadCsv({
+          data: [{ n: 1 }, { n: 2 }, { n: null }, { n: undefined }, { n: 5 }],
+          columns: [
+            { key: "n", title: "Number,Basic" },
+            { key: "n", title: "Double,Doubled", value: (n) => n * 2 },
+          ],
+          fileName: "My_File",
+        });
+      });
+    </script>
+  </body>
+</html>
