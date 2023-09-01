@@ -11,7 +11,7 @@ The CSV file format is based on [RFC 4180](https://www.ietf.org/rfc/rfc4180.txt)
 ## Installation
 
 ```sh
-npm install download-csv
+npm install csv-dl
 ```
 
 ## Usage
